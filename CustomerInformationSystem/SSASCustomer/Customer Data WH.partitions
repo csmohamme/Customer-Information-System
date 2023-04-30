@@ -1,0 +1,356 @@
+﻿<Cube xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="d9e8bc8c-6968-43b6-ab25-cb7b4a1223ce" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>Customer Data WH</ID>
+  <MeasureGroups>
+    <MeasureGroup>
+      <ID>Customer</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="11877718-9806-4e8a-ba3f-7236ee85b53e">
+          <ID>Customer</ID>
+          <Name>Customer</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="811e8281-1ce1-45d2-9a6f-0ecaad0b34c1">
+            <DataSourceViewID>Customer Data WH</DataSourceViewID>
+            <TableID>dbo_Customer</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+          <EstimatedRows>9</EstimatedRows>
+          <AggregationDesignID>AggregationDesign</AggregationDesignID>
+        </Partition>
+      </Partitions>
+      <AggregationDesigns>
+        <AggregationDesign>
+          <ID>AggregationDesign</ID>
+          <Name>AggregationDesign</Name>
+          <CreatedTimestamp>2023-04-29T13:14:19.236667Z</CreatedTimestamp>
+          <LastSchemaUpdate>2023-04-29T13:14:19.236667Z</LastSchemaUpdate>
+          <EstimatedRows>9</EstimatedRows>
+          <Dimensions>
+            <Dimension>
+              <CubeDimensionID>States</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>States Id</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>States Name</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Country</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Country Id</AttributeID>
+                  <EstimatedCount>3</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Country Name</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Area Id FK</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Product</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Product Id</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Product Name</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Time</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Date</AttributeID>
+                  <EstimatedCount>2191</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Year</AttributeID>
+                  <EstimatedCount>6</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Quarter</AttributeID>
+                  <EstimatedCount>24</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Month</AttributeID>
+                  <EstimatedCount>72</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Day Of Year</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Day Of Quarter</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Day Of Month</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Month Of Year</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Month Of Quarter</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Quarter Of Year</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Saler</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Saler Id</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Saler Name</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Boss Saler Id</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Saler Boss Name</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Area</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Area Id</AttributeID>
+                  <EstimatedCount>2</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Area Name</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Product Id</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Vendor Product Id</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Vendor Id</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Product Id</AttributeID>
+                  <EstimatedCount>4</EstimatedCount>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Descriotion</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Profit Precentage</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+            <Dimension>
+              <CubeDimensionID>Vendors</CubeDimensionID>
+              <Attributes>
+                <Attribute>
+                  <AttributeID>Vendor Id</AttributeID>
+                </Attribute>
+                <Attribute>
+                  <AttributeID>Vendor Name</AttributeID>
+                </Attribute>
+              </Attributes>
+            </Dimension>
+          </Dimensions>
+          <Aggregations>
+            <Aggregation>
+              <ID>Aggregation 0</ID>
+              <Name>Aggregation 0</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>States</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Country</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Time</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Saler</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Area</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Area Id</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product Id</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Vendors</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 1</ID>
+              <Name>Aggregation 1</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>States</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Country</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Time</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Saler</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Boss Saler Id</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Area</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product Id</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Vendors</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 2</ID>
+              <Name>Aggregation 2</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>States</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Country</CubeDimensionID>
+                  <Attributes>
+                    <Attribute>
+                      <AttributeID>Country Id</AttributeID>
+                    </Attribute>
+                  </Attributes>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Time</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Saler</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Area</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product Id</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Vendors</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+            <Aggregation>
+              <ID>Aggregation 3</ID>
+              <Name>Aggregation 3</Name>
+              <Dimensions>
+                <Dimension>
+                  <CubeDimensionID>States</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Country</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Time</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Saler</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Area</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Product Id</CubeDimensionID>
+                </Dimension>
+                <Dimension>
+                  <CubeDimensionID>Vendors</CubeDimensionID>
+                </Dimension>
+              </Dimensions>
+            </Aggregation>
+          </Aggregations>
+        </AggregationDesign>
+      </AggregationDesigns>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Vendor Product</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="e0632ede-4e4f-4b00-bc19-a0306ae1d9e6">
+          <ID>Vendor Product</ID>
+          <Name>Vendor Product</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="39bc4472-4396-441a-8d6f-352c34efbdc6">
+            <DataSourceViewID>Customer Data WH</DataSourceViewID>
+            <TableID>dbo_VendorProduct</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+    <MeasureGroup>
+      <ID>Customer 1</ID>
+      <Partitions>
+        <Partition dwd:design-time-name="43542b16-7163-4e93-9eb7-8b1f8d811fe4">
+          <ID>Customer</ID>
+          <Name>Customer</Name>
+          <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+          <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+          <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+          <State>Unprocessed</State>
+          <Source xsi:type="DsvTableBinding" dwd:design-time-name="ba4021bd-e318-478f-b7d0-17adf52a0b84">
+            <DataSourceViewID>Customer Data WH</DataSourceViewID>
+            <TableID>dbo_Customer</TableID>
+          </Source>
+          <StorageMode>Molap</StorageMode>
+          <CurrentStorageMode>Molap</CurrentStorageMode>
+          <ProcessingMode>Regular</ProcessingMode>
+        </Partition>
+      </Partitions>
+    </MeasureGroup>
+  </MeasureGroups>
+</Cube>
